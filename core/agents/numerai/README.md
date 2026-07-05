@@ -1,20 +1,19 @@
 # Numerai Agent
 
-Numerai ML pipeline integrated into the Human-AI swarm. Trains a LightGBM model on
-Numerai's obfuscated stock-market dataset and optionally submits live predictions to
-the Numerai tournament.
+Numerai ML pipeline — trains a LightGBM model on Numerai's obfuscated stock-market
+dataset and optionally submits live predictions to the Numerai tournament.
+
+Extracted from the `human-ai` monorepo. Supports the main Numerai tournament,
+the Crypto tournament, and the Signals tournament.
 
 ## Quick Start
 
 ```bash
-# From the human-ai project root
-source .venv/bin/activate
-
 # Dry-run (no API key needed — uses synthetic data if nothing is cached)
-python3 agents/numerai/numerai_pipeline.py --dry-run
+python3 core/agents/numerai/numerai_pipeline.py --dry-run
 
 # Full run with submission
-python3 agents/numerai/numerai_pipeline.py --model-id <your_model_id>
+python3 core/agents/numerai/numerai_pipeline.py --model-id <your_model_id>
 ```
 
 ## Getting an API Key
